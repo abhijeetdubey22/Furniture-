@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Showcase: Ekveera Luxury Furniture & Interior Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    :root {
+      --bg-deep: #0a0908;
+      --bg-surface: #12100e;
+      --bg-card: rgba(22, 19, 16, 0.85);
+      --gold-primary: #d4af37;
+      --gold-light: #f6e6b4;
+      --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f6e6b4 50%, #aa820a 100%);
+      --text-main: #fcfbf9;
+      --text-secondary: #b8b1a5;
+      --border-subtle: rgba(212, 175, 55, 0.15);
+      --border-gold: rgba(212, 175, 55, 0.5);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 10px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.sub { color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 0.95rem; }
+
+    .showcase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-title i { color: var(--gold-primary); }
+    .card-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; }
+
+    video {
+      width: 100%;
+      max-height: 620px;
+      border-radius: 14px;
+      background: #000;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+    .photo-item {
+      background: rgba(14, 12, 10, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+    .photo-item:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-4px);
+    }
+    .photo-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: top;
+      background: #050403;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .photo-info {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .photo-name { font-weight: 700; font-size: 0.92rem; color: #fff; }
+    .photo-sub { font-size: 0.75rem; color: var(--text-secondary); }
+    .btn-download {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-download:hover {
+      background: var(--gold-gradient);
+      color: #0c0a08;
+    }
+
+    .actions-bar {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .btn-action-main {
+      background: var(--gold-gradient);
+      color: #0c0a08;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+    }
+    .btn-action-sub {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="header">
+      <div class="badge"><i class="ti ti-crown"></i> Client Presentation Deck</div>
+      <h1>Ekveera Luxury Furniture & Interior</h1>
+      <p class="sub">Phone-first responsive web design with interactive 3D cost estimator, curated solid teak collections, and sanitized dummy contact information.</p>
+    </div>
+
+    <!-- 1. Video Player Showcase -->
+    <div class="showcase-card">
+      <div class="card-title">
+        <i class="ti ti-video"></i>
+        <span>High-Definition Website Walkthrough Video</span>
+      </div>
+      <p class="card-desc">Cinematic 12-second walkthrough showcasing Desktop Showroom, Phone-First Mobile UI, Collections Catalog, and Interactive Cost Estimator.</p>
+      
+      <video controls autoplay loop muted playsinline>
+        <source src="./client_showcase_video.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+
+      <div style="display: flex; justify-content: flex-end; margin-top: 14px;">
+        <a href="./client_showcase_video.webm" download class="btn-download">
+          <i class="ti ti-download"></i> Download Video (.webm)
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. Photo Gallery Showcase -->
+    <div class="showcase-card">
+      <div class="card-title">
+        <i class="ti ti-photo"></i>
+        <span>High-Resolution Client Photos</span>
+      </div>
+      <p class="card-desc">Click any photo or download button to view full resolution image files.</p>
+
+      <div class="gallery-grid">
+        
+        <!-- Mobile Photo -->
+        <div class="photo-item">
+          <a href="./client_photo_mobile.png" target="_blank">
+            <img src="./client_photo_mobile.png" alt="Phone-First Mobile View" />
+          </a>
+          <div class="photo-info">
+            <div>
+              <div class="photo-name">📱 Phone-First Mobile View</div>
+              <div class="photo-sub">390×844 iPhone Viewport • Sticky Bottom Bar</div>
+            </div>
+            <a href="./client_photo_mobile.png" download class="btn-download">
+              <i class="ti ti-download"></i> Download
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Photo -->
+        <div class="photo-item">
+          <a href="./client_photo_desktop.png" target="_blank">
+            <img src="./client_photo_desktop.png" alt="Desktop Showroom Hero" />
+          </a>
+          <div class="photo-info">
+            <div>
+              <div class="photo-name">💻 Desktop Showroom View</div>
+              <div class="photo-sub">1440×900 Widescreen • Trust Matrix & Nav</div>
+            </div>
+            <a href="./client_photo_desktop.png" download class="btn-download">
+              <i class="ti ti-download"></i> Download
+            </a>
+          </div>
+        </div>
+
+        <!-- Estimator Photo -->
+        <div class="photo-item">
+          <a href="./client_photo_estimator.png" target="_blank">
+            <img src="./client_photo_estimator.png" alt="Interactive Cost Estimator" />
+          </a>
+          <div class="photo-info">
+            <div>
+              <div class="photo-name">🧮 3D Cost Estimator</div>
+              <div class="photo-sub">Real-Time Factory Price Calculation</div>
+            </div>
+            <a href="./client_photo_estimator.png" download class="btn-download">
+              <i class="ti ti-download"></i> Download
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog Photo -->
+        <div class="photo-item">
+          <a href="./client_photo_catalog.png" target="_blank">
+            <img src="./client_photo_catalog.png" alt="Catalog Collections" />
+          </a>
+          <div class="photo-info">
+            <div>
+              <div class="photo-name">🛋️ Collections & Catalog</div>
+              <div class="photo-sub">Teak Sofas, Marble Dining, Hydraulic Beds</div>
+            </div>
+            <a href="./client_photo_catalog.png" download class="btn-download">
+              <i class="ti ti-download"></i> Download
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Direct Links Bar -->
+    <div class="actions-bar">
+      <a href="./index.html" class="btn-action-main">
+        <i class="ti ti-world"></i> Open Website (index.html)
+      </a>
+      <a href="./admin.html" class="btn-action-sub">
+        <i class="ti ti-shield-lock"></i> Owner Admin Portal
+      </a>
+      <a href="https://github.com/abhijeetdubey22/Furniture-" target="_blank" class="btn-action-sub">
+        <i class="ti ti-brand-github"></i> GitHub Repository
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
