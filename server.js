@@ -39,13 +39,13 @@ const server = http.createServer((req, res) => {
 
   // Friendly aliases
   if (pathname === '/' || pathname === '') {
-    pathname = '/client_presentation.html';
+    pathname = '/index.html';
   } else if (pathname === '/unix') {
-    pathname = '/unix.html';
+    pathname = '/index.html';
+  } else if (pathname === '/presentation') {
+    pathname = '/client_presentation.html';
   } else if (pathname === '/admin') {
     pathname = '/admin.html';
-  } else if (pathname === '/store') {
-    pathname = '/index.html';
   }
 
   let filePath = path.join(__dirname, pathname);
@@ -71,10 +71,9 @@ const server = http.createServer((req, res) => {
               <h2>404 — Page Not Found</h2>
               <p>The requested file <code>${pathname}</code> was not found.</p>
               <div style="margin-top: 2rem;">
-                <a href="/client_presentation.html" style="margin: 0 10px; color: #c8a256;">Client Presentation</a>
-                <a href="/unix.html" style="margin: 0 10px; color: #c8a256;">UNIX Atelier</a>
-                <a href="/index.html" style="margin: 0 10px; color: #c8a256;">Storefront</a>
-                <a href="/admin.html" style="margin: 0 10px; color: #c8a256;">Admin</a>
+                <a href="/index.html" style="margin: 0 10px; color: #c8a256;">UNIX Atelier (Main)</a>
+                <a href="/client_presentation.html" style="margin: 0 10px; color: #c8a256;">Presentation Portal</a>
+                <a href="/admin.html" style="margin: 0 10px; color: #c8a256;">Admin Portal</a>
               </div>
             </div>
           `);
@@ -108,14 +107,14 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`
   ══════════════════════════════════════════════════════════════════
-  ✦ UNIX Atelier & Ekveera Furniture Local Server Running!
+  ✦ UNIX Haute Ébénisterie Atelier Server Running!
   ✦ Port: ${PORT}
   ✦ URL:  http://localhost:${PORT}
   ══════════════════════════════════════════════════════════════════
-  • Client Presentation: http://localhost:${PORT}/
-  • UNIX Atelier Site:   http://localhost:${PORT}/unix.html
-  • Ekveera Storefront:  http://localhost:${PORT}/index.html
-  • Admin Dashboard:     http://localhost:${PORT}/admin.html
+  • Main UNIX Atelier Site: http://localhost:${PORT}/
+  • Presentation Portal:    http://localhost:${PORT}/client_presentation.html
+  • Admin Dashboard:        http://localhost:${PORT}/admin.html
   ══════════════════════════════════════════════════════════════════
   `);
 });
+
