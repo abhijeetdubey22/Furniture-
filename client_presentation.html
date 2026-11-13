@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIX Atelier — Executive Client Presentation & Interactive Showcase</title>
+  <meta name="description" content="Executive client presentation portal for the new UNIX Haute Ébénisterie & Architectural Interior website." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0a0908;
+      --bg-surface: #14110e;
+      --bg-card: rgba(24, 20, 16, 0.85);
+      --border-gold: rgba(200, 162, 86, 0.35);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --gold-primary: #c8a256;
+      --gold-light: #e8d39e;
+      --text-main: #fafaf8;
+      --text-muted: #8e8880;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Presentation Bar */
+    .pres-header {
+      background: rgba(18, 15, 12, 0.95);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+    }
+
+    .pres-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pres-crest {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .pres-titles h1 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .pres-titles span {
+      font-size: 0.65rem;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      display: block;
+    }
+
+    .pres-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .device-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .device-btn.active, .device-btn:hover {
+      background: rgba(200, 162, 86, 0.15);
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+    }
+
+    .btn-launch-full {
+      background: linear-gradient(135deg, #c8a256 0%, #e8d39e 50%, #9e7b30 100%);
+      color: #0c0a08;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(200, 162, 86, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-launch-full:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(200, 162, 86, 0.5);
+    }
+
+    /* Presentation Layout */
+    .pres-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      background: radial-gradient(ellipse at 50% 20%, rgba(200, 162, 86, 0.06), transparent 70%);
+    }
+
+    .frame-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Device Frames */
+    .frame-wrapper {
+      background: #000;
+      border: 2px solid var(--border-gold);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
+      transition: width 0.35s ease, height 0.35s ease;
+    }
+
+    .frame-wrapper.desktop {
+      width: 100%;
+      max-width: 1360px;
+      height: 82vh;
+    }
+
+    .frame-wrapper.tablet {
+      width: 820px;
+      height: 82vh;
+    }
+
+    .frame-wrapper.mobile {
+      width: 414px;
+      height: 82vh;
+      border-radius: 36px;
+      border-width: 4px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--border-gold);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #12100e;
+    }
+
+    /* Client Pitch Summary Strip */
+    .pitch-strip {
+      max-width: 1360px;
+      width: 100%;
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .pitch-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .pitch-strip { grid-template-columns: 1fr; }
+    }
+
+    .pitch-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pitch-badge {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .pitch-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .pitch-desc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="pres-header">
+    <div class="pres-brand">
+      <div class="pres-crest">U</div>
+      <div class="pres-titles">
+        <h1>UNIX Haute Ébénisterie</h1>
+        <span>Client Presentation Portal</span>
+      </div>
+    </div>
+
+    <div class="pres-controls">
+      <button type="button" class="device-btn active" data-mode="desktop">
+        💻 Desktop
+      </button>
+      <button type="button" class="device-btn" data-mode="tablet">
+        📱 Tablet
+      </button>
+      <button type="button" class="device-btn" data-mode="mobile">
+        📱 Phone-First
+      </button>
+
+      <a href="./unix.html" target="_blank" class="btn-launch-full" title="Open UNIX in Full Window">
+        <span>Launch Fullscreen</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="pres-main">
+    <div class="frame-container">
+      <div class="frame-wrapper desktop" id="previewFrame">
+        <iframe src="./unix.html" title="UNIX Haute Ébénisterie Live Site Preview"></iframe>
+      </div>
+    </div>
+
+    <!-- Pitch Feature Badges For Client Approval -->
+    <div class="pitch-strip">
+      <div class="pitch-card">
+        <span class="pitch-badge">01. 3D Interaction</span>
+        <h4 class="pitch-title">360° Atelier Studio</h4>
+        <p class="pitch-desc">Lightweight HTML5 2D Canvas 3D engine with true camera depth-sorting, piece switching, and material reactivity.</p>
+      </div>
+
+      <div class="pitch-card">
+        <span class="pitch-badge">02. Materials Archive</span>
+        <h4 class="pitch-title">Tactile Material Lab</h4>
+        <p class="pitch-desc">Interactive timber and stone archive with acoustic and durability ratings for luxury architectural buyers.</p>
+      </div>
+
+      <div class="pitch-card">
+        <span class="pitch-badge">03. Space Estimator</span>
+        <h4 class="pitch-title">Architectural Budgeting</h4>
+        <p class="pitch-desc">Real-time space tier calculator with instant dossier addition and WhatsApp concierge transmission.</p>
+      </div>
+
+      <div class="pitch-card">
+        <span class="pitch-badge">04. Client Conversion</span>
+        <h4 class="pitch-title">Private Dossier & PDF</h4>
+        <p class="pitch-desc">Private curation tray with quantity controls, official monograph print export, and 1-tap VIP consultation.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.device-btn');
+    const frame = document.getElementById('previewFrame');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mode = btn.dataset.mode;
+        frame.className = `frame-wrapper ${mode}`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>UNIX — Haute Ébénisterie & Architectural Interior Atelier</title>
+  <meta name="description" content="UNIX is an avant-garde luxury furniture studio and architectural interior atelier. Bespoke solid timber joinery, monolithic stone tables, and custom spaces." />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="./unix.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Haute Announcement Bar
+       ======================================================================== -->
+  <div class="haute-banner">
+    <div class="container haute-banner-inner">
+      <div>
+        <span class="haute-bullet">◆</span>
+        <span>ATELIER COMMISSIONS OPEN FOR 2026/2027 • MUMBAI • NEW DELHI • BENGALURU • MILAN</span>
+      </div>
+      <div class="haute-links">
+        <a href="tel:+919876543210" class="haute-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+91 98765 43210</span>
+        </a>
+        <span>|</span>
+        <a href="mailto:concierge@unixatelier.com" class="haute-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>concierge@unixatelier.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. Sticky Navigation Header
+       ======================================================================== -->
+  <header class="site-nav-header">
+    <div class="container nav-inner">
+      
+      <!-- Brand Logo Mark -->
+      <a href="./unix.html" class="brand-mark" aria-label="UNIX Home">
+        <svg class="brand-crest-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="16" cy="16" r="14" stroke-dasharray="1 3" />
+          <polygon points="16,5 26,23 6,23" />
+          <circle cx="16" cy="17" r="3" fill="currentColor" />
+        </svg>
+        <div class="brand-name-group">
+          <span class="brand-title">UNIX</span>
+          <span class="brand-subtitle">Haute Ébénisterie</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-link-item"><a href="#studio-3d">3D Studio</a></li>
+          <li class="nav-link-item"><a href="#curations">Curations</a></li>
+          <li class="nav-link-item"><a href="#materials">Material Lab</a></li>
+          <li class="nav-link-item"><a href="#estimator">Space Estimator</a></li>
+          <li class="nav-link-item"><a href="#craft">Artisanship</a></li>
+          <li class="nav-link-item"><a href="#showrooms">Showrooms</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions: Theme, Dossier & Appointment -->
+      <div class="nav-actions">
+        <!-- Ambient Atmosphere Mode Toggle -->
+        <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle Lighting Atmosphere" title="Switch Day/Evening Atmosphere">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Client Dossier Drawer Trigger -->
+        <button class="btn-icon" id="openDossierBtn" aria-label="Open Private Dossier" title="View Saved Dossier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <span class="badge-counter" id="dossierCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Book Consultation CTA -->
+        <button class="btn-gold nav-consultation-btn" data-open-appointment data-subject="Showroom Consultation">
+          <span>Book Viewing</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Navigation Menu Toggle Trigger -->
+        <button class="btn-icon mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Toggle Navigation Menu" aria-expanded="false" title="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <nav class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <div class="mobile-nav-header-row">
+          <span class="mobile-nav-heading">Atelier Index</span>
+          <button class="btn-icon" id="closeMobileNavBtn" aria-label="Close Navigation Menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#studio-3d" class="mobile-nav-link"><span>01</span> 3D Studio Configurator</a></li>
+          <li><a href="#curations" class="mobile-nav-link"><span>02</span> Curated Masterpieces</a></li>
+          <li><a href="#materials" class="mobile-nav-link"><span>03</span> Tactile Material Archive</a></li>
+          <li><a href="#estimator" class="mobile-nav-link"><span>04</span> Space Investment Estimator</a></li>
+          <li><a href="#craft" class="mobile-nav-link"><span>05</span> Art of Ébénisterie</a></li>
+          <li><a href="#showrooms" class="mobile-nav-link"><span>06</span> Global Ateliers</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+          <button class="btn-gold" style="width: 100%;" data-open-appointment data-subject="Mobile Consultation Request">
+            <span>Schedule Private Viewing</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-concierge-info">
+            <a href="tel:+919876543210" class="mobile-concierge-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+91 98765 43210</span>
+            </a>
+            <span>•</span>
+            <a href="mailto:concierge@unixatelier.com" class="mobile-concierge-link">
+              <span>concierge@unixatelier.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         3. Hero Section: Exaggerated Minimalism & Statement Luxury
+         ======================================================================== -->
+    <section class="hero-atelier">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-text-block">
+            <div class="hero-eyebrow">
+              Bespoke Furniture & Architectural Spaces
+            </div>
+            <h1 class="hero-headline">
+              Sculpted for<br />
+              <em>Timeless</em> Living.
+            </h1>
+            <p class="hero-lead">
+              UNIX synthesizes monolithic natural stone with centurial solid timber joinery. 
+              Each bespoke creation is handcrafted in our Milan atelier to inhabit spaces of architectural distinction.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#studio-3d" class="btn-gold">
+                <span>Launch 3D Configurator</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </a>
+              <a href="#curations" class="btn-outline">
+                <span>Explore Works (2026)</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <div class="metric-number">120<span>h</span></div>
+                <div class="metric-label">Average Hand Joinery</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-number">0<span>%</span></div>
+                <div class="metric-label">Metal Fasteners in Shell</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-number">100<span>yr</span></div>
+                <div class="metric-label">Heirloom Structural Life</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual & Floating Card -->
+          <div class="hero-visual-card">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80" alt="UNIX Kyoto Monolith Chair in Alpine Bouclé" loading="eager" />
+              <div class="hero-floating-pill">
+                <div>
+                  <div class="pill-title">The Kyoto Monolith</div>
+                  <div class="pill-desc">Appalachian Walnut & Alpine Bouclé</div>
+                </div>
+                <div class="pill-price">₹2,48,500</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Interactive 3D Studio & Real-time Material Configurator
+         ======================================================================== -->
+    <section class="section-3d-studio" id="studio-3d">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Real-Time Interactive Configurator</span>
+          <h2 class="section-title">The 3D Atelier Visualizer</h2>
+          <p class="section-desc">
+            Rotate 360°, inspect mortise-and-tenon joins, and configure authentic stone, timber, and tactile upholstery in real time.
+          </p>
+        </div>
+
+        <div class="studio-grid">
+          
+          <!-- 3D Canvas Stage -->
+          <div class="canvas-stage">
+            <div class="canvas-header-bar">
+              <div class="canvas-title">
+                <span class="pulse-indicator"></span>
+                <span>Interactive 3D Engine • Live Orbit Active</span>
+              </div>
+              <div class="lighting-controls">
+                <button class="lighting-btn active" data-light="morning">Studio Light</button>
+                <button class="lighting-btn" data-light="dusk">Golden Dusk</button>
+                <button class="lighting-btn" data-light="gallery">Spotlight</button>
+              </div>
+            </div>
+
+            <!-- Canvas Element -->
+            <canvas id="furnitureCanvas"></canvas>
+
+            <div class="canvas-hint-overlay">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+              </svg>
+              <span>Click & Drag to Rotate 360° • Scroll to Zoom</span>
+            </div>
+          </div>
+
+          <!-- Configuration Controls Panel -->
+          <div class="studio-controls-panel">
+            <div>
+              <!-- Piece Selector Tabs -->
+              <div class="piece-selector-tabs" role="tablist" aria-label="Select Piece to Configure">
+                <button class="piece-tab active" data-model="kyoto" role="tab" aria-selected="true">Kyoto Lounger</button>
+                <button class="piece-tab" data-model="aethel" role="tab" aria-selected="false">Aethel Table</button>
+                <button class="piece-tab" data-model="solstice" role="tab" aria-selected="false">Solstice Credenza</button>
+              </div>
+
+              <div class="piece-header-badge" id="studioPieceBadge">Edition No. 01 • Master Sculptor Series</div>
+              <h3 class="piece-name" id="studioPieceName">The Kyoto Monolith</h3>
+              <p class="piece-tagline" id="studioPieceTagline">
+                Curved timber spine with seamless mortise-and-tenon architecture. 
+                Double-curved ergonomic shell with hand-turned champagne bronze ferrules.
+              </p>
+
+              <!-- Material Selector -->
+              <div class="option-group">
+                <div class="option-group-label">
+                  <span>Selected Material Finish</span>
+                  <span class="option-selected-name" id="selectedMaterialName">Bouclé Ivoire</span>
+                </div>
+                <div class="swatches-grid" id="materialSwatchesGrid">
+                  <!-- Swatches generated by unix.js -->
+                </div>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="spec-mini-table">
+                <div class="spec-row">
+                  <span class="spec-key">Joinery Type</span>
+                  <span class="spec-val" id="studioSpecJoinery">Concealed Japanese Mortise & Tenon</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Dimensions</span>
+                  <span class="spec-val" id="studioSpecDimensions">W 98cm × D 92cm × H 78cm</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Lead Time</span>
+                  <span class="spec-val" id="studioSpecLeadTime">6–8 Weeks Handcrafted</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">Certification</span>
+                  <span class="spec-val">100% FSC Forest Harvest</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing & Action -->
+            <div class="panel-pricing-action">
+              <div class="price-display-wrapper">
+                <div>
+                  <div class="price-label">Configured Investment</div>
+                  <div class="price-figure" id="studioConfiguredPrice">₹2,48,500</div>
+                </div>
+                <span style="font-size: 0.72rem; color: var(--accent-gold-dark); text-transform: uppercase;">GST & White-Glove Included</span>
+              </div>
+              <button class="btn-gold" id="addConfiguredToDossierBtn" style="width: 100%;">
+                <span>Add Custom Spec to Dossier</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Curated Masterpiece Collections (Catalog & Filter)
+         ======================================================================== -->
+    <section class="section-curations" id="curations">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Haute Ébénisterie</span>
+          <h2 class="section-title">Curated Masterpieces</h2>
+          <p class="section-desc">
+            Sculptural seating, monolithic stone tables, cantilevered beds, and ceiling-height modular libraries engineered with zero compromises.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="curation-filters" role="tablist">
+          <button class="filter-tab active" data-filter="all" role="tab">All Works</button>
+          <button class="filter-tab" data-filter="seating" role="tab">Seating & Loungers</button>
+          <button class="filter-tab" data-filter="tables" role="tab">Monolithic Tables</button>
+          <button class="filter-tab" data-filter="sanctuary" role="tab">Sanctuary Beds</button>
+          <button class="filter-tab" data-filter="architectural" role="tab">Architectural Storage</button>
+        </div>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-grid" id="catalogGridContainer">
+          <!-- Populated dynamically by unix.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. The Tactile Material Lab
+         ======================================================================== -->
+    <section class="section-material-lab" id="materials">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Provenance & Tactility</span>
+          <h2 class="section-title">The Material Archive</h2>
+          <p class="section-desc">
+            Every material is ethically sourced from historic European quarries and regenerative North American forests, treated with non-toxic botanical oils.
+          </p>
+        </div>
+
+        <div class="materials-carousel-grid">
+          
+          <div class="material-card">
+            <div class="material-swatch-view">
+              <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=600&q=80" alt="Appalachian Black Walnut Texture" loading="lazy" />
+            </div>
+            <span class="material-origin-tag">North America • FSC Certified</span>
+            <h3 class="material-name">Appalachian Black Walnut</h3>
+            <p class="material-description">
+              Kiln-dried slowly for 18 months to reach 7% equilibrium moisture. Deep violet-chocolate tones hand-rubbed with natural organic beeswax.
+            </p>
+            <ul class="material-specs-list">
+              <li><span>Hardness:</span> <span>1,010 lbf (Janka)</span></li>
+              <li><span>Finish:</span> <span>Zero-VOC Botanical Polish</span></li>
+            </ul>
+            <button class="btn-outline btn-order-sample" data-material="Appalachian Black Walnut" style="margin-top: 1.25rem;">
+              Order Material Sample
+            </button>
+          </div>
+
+          <div class="material-card">
+            <div class="material-swatch-view">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Roman Navona Travertine" loading="lazy" />
+            </div>
+            <span class="material-origin-tag">Tivoli Quarries, Italy</span>
+            <h3 class="material-name">Roman Navona Travertine</h3>
+            <p class="material-description">
+              Quarried from the monumental subterranean beds of Tivoli. Hand-honed to preserve organic cavities with a velvety, warm tactile finish.
+            </p>
+            <ul class="material-specs-list">
+              <li><span>Density:</span> <span>2,450 kg/m³</span></li>
+              <li><span>Sealant:</span> <span>Invisible Oleophobic Shield</span></li>
+            </ul>
+            <button class="btn-outline btn-order-sample" data-material="Roman Navona Travertine" style="margin-top: 1.25rem;">
+              Order Material Sample
+            </button>
+          </div>
+
+          <div class="material-card">
+            <div class="material-swatch-view">
+              <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=600&q=80" alt="Tuscan Saddle Leather" loading="lazy" />
+            </div>
+            <span class="material-origin-tag">Santa Croce sull'Arno, Tuscany</span>
+            <h3 class="material-name">Tuscan Saddle Leather</h3>
+            <p class="material-description">
+              Tanned over 60 days in chestnut bark tannins without chrome. Retains organic natural skin pores that age into a lustrous golden-cognac patina.
+            </p>
+            <ul class="material-specs-list">
+              <li><span>Thickness:</span> <span>2.2mm Full Grain</span></li>
+              <li><span>Tannin:</span> <span>Chestnut & Mimosa Extract</span></li>
+            </ul>
+            <button class="btn-outline btn-order-sample" data-material="Tuscan Saddle Leather" style="margin-top: 1.25rem;">
+              Order Material Sample
+            </button>
+          </div>
+
+          <div class="material-card">
+            <div class="material-swatch-view">
+              <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?auto=format&fit=crop&w=600&q=80" alt="Alpine Cashmere Bouclé" loading="lazy" />
+            </div>
+            <span class="material-origin-tag">Biella Mills, Northern Italy</span>
+            <h3 class="material-name">Alpine Cashmere Bouclé</h3>
+            <p class="material-description">
+              Woven on vintage mechanical looms from 70% virgin merino and 30% Mongolian cashmere. Cloud-soft tactile depth with 100,000 Martindale rating.
+            </p>
+            <ul class="material-specs-list">
+              <li><span>Martindale:</span> <span>100,000 Rubs</span></li>
+              <li><span>Composition:</span> <span>Merino, Cashmere & Silk</span></li>
+            </ul>
+            <button class="btn-outline btn-order-sample" data-material="Alpine Cashmere Bouclé" style="margin-top: 1.25rem;">
+              Order Material Sample
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Interactive Space Investment & Curation Estimator
+         ======================================================================== -->
+    <section class="section-estimator" id="estimator">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Architectural Planning</span>
+          <h2 class="section-title">Space Investment Estimator</h2>
+          <p class="section-desc">
+            Plan your project budget and custom curation scope with our real-time architectural pricing model.
+          </p>
+        </div>
+
+        <div class="estimator-box">
+          <div class="estimator-steps-grid">
+            
+            <!-- Estimator Controls -->
+            <div class="estimator-controls">
+              
+              <!-- Step 1: Space Type -->
+              <div>
+                <div class="step-block-title">
+                  <span class="step-num">1</span>
+                  <span>Select Space Typology</span>
+                </div>
+                <div class="room-options-grid" role="radiogroup" aria-label="Space Typology">
+                  <div class="room-radio-btn active" data-room="penthouse" role="radio" tabindex="0" aria-checked="true">
+                    <span class="room-btn-title">Penthouse Living</span>
+                    <span class="room-btn-hint">Low-slung seating, cocktail table, credenza</span>
+                  </div>
+                  <div class="room-radio-btn" data-room="sanctuary" role="radio" tabindex="0" aria-checked="false">
+                    <span class="room-btn-title">Master Suite</span>
+                    <span class="room-btn-hint">Cantilever bed, integrated lighting, loungers</span>
+                  </div>
+                  <div class="room-radio-btn" data-room="villa" role="radio" tabindex="0" aria-checked="false">
+                    <span class="room-btn-title">Executive Villa</span>
+                    <span class="room-btn-hint">Full living, dining monolith, library millwork</span>
+                  </div>
+                  <div class="room-radio-btn" data-room="hospitality" role="radio" tabindex="0" aria-checked="false">
+                    <span class="room-btn-title">Boutique Hospitality</span>
+                    <span class="room-btn-hint">High-traffic contract grade & custom suites</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Scale & Square Footage -->
+              <div>
+                <div class="step-block-title">
+                  <span class="step-num">2</span>
+                  <span>Spatial Scale & Area</span>
+                </div>
+                <div class="slider-container">
+                  <div class="slider-val-display">
+                    <span>Target Floor Area</span>
+                    <span id="sliderSqftVal" style="color: var(--accent-gold-dark); font-weight: 600;">850 sq.ft</span>
+                  </div>
+                  <input type="range" class="styled-range" id="roomScaleSlider" min="400" max="2500" step="50" value="850" aria-label="Floor Area in Square Feet" />
+                </div>
+              </div>
+
+              <!-- Step 3: Material Grade -->
+              <div>
+                <div class="step-block-title">
+                  <span class="step-num">3</span>
+                  <span>Craftsmanship Tier</span>
+                </div>
+                <div class="grade-pills-row" role="radiogroup" aria-label="Craftsmanship Tier">
+                  <div class="grade-pill-btn active" data-grade="bespoke" role="radio" tabindex="0" aria-checked="true">
+                    <div class="grade-pill-name">Atelier Bespoke</div>
+                    <div class="grade-pill-desc">Solid Walnut & Bouclé</div>
+                  </div>
+                  <div class="grade-pill-btn" data-grade="reserve" role="radio" tabindex="0" aria-checked="false">
+                    <div class="grade-pill-name">Haute Reserve</div>
+                    <div class="grade-pill-desc">Tuscan Leather & Travertine</div>
+                  </div>
+                  <div class="grade-pill-btn" data-grade="collector" role="radio" tabindex="0" aria-checked="false">
+                    <div class="grade-pill-name">Collector's Grade</div>
+                    <div class="grade-pill-desc">Calacatta Viola & Lost-Wax Bronze</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4: Add-on Services -->
+              <div>
+                <div class="step-block-title">
+                  <span class="step-num">4</span>
+                  <span>White-Glove & Architectural Add-ons</span>
+                </div>
+                <div class="addon-options-list">
+                  <label class="addon-checkbox-label">
+                    <div class="addon-checkbox-inner">
+                      <input type="checkbox" class="custom-chk" id="addonLighting" checked />
+                      <span>Concealed 2700K Architectural LED Integration</span>
+                    </div>
+                    <span class="addon-cost-tag">+₹24,000</span>
+                  </label>
+                  <label class="addon-checkbox-label">
+                    <div class="addon-checkbox-inner">
+                      <input type="checkbox" class="custom-chk" id="addonWhiteGlove" checked />
+                      <span>White-Glove Delivery, Floor Staging & Packaging Removal</span>
+                    </div>
+                    <span class="addon-cost-tag">+₹18,500</span>
+                  </label>
+                  <label class="addon-checkbox-label">
+                    <div class="addon-checkbox-inner">
+                      <input type="checkbox" class="custom-chk" id="addonMillwork" />
+                      <span>Custom Wall Millwork Panels & Fluted Wall Paneling</span>
+                    </div>
+                    <span class="addon-cost-tag">+₹58,000</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Summary Output Card -->
+            <div class="estimator-summary-card">
+              <div>
+                <div class="summary-card-header">
+                  <h3 class="summary-headline">Curation Estimate</h3>
+                  <div class="summary-subtitle" id="summarySelectedRoom">Penthouse Living Space</div>
+                </div>
+
+                <ul class="summary-breakdown-list">
+                  <li>
+                    <span class="item-label">Estimated Works:</span>
+                    <span class="item-val" id="summaryEstimatedPieces">6-8 Curated Works</span>
+                  </li>
+                  <li>
+                    <span class="item-label">Artisan Studio:</span>
+                    <span class="item-val">Milan Atelier, Italy</span>
+                  </li>
+                  <li>
+                    <span class="item-label">Joinery Warranty:</span>
+                    <span class="item-val">Lifetime Heirloom</span>
+                  </li>
+                  <li>
+                    <span class="item-label">CAD & Render Service:</span>
+                    <span class="item-val">Included Complimentary</span>
+                  </li>
+                </ul>
+
+                <div class="summary-total-block">
+                  <div class="total-invest-label">Projected Investment</div>
+                  <div class="total-invest-amount" id="summaryTotalEstimate">₹2,48,000</div>
+                  <div class="total-invest-timeline" id="summaryLeadTime">Estimated 6–8 Weeks Handcrafted</div>
+                </div>
+              </div>
+
+              <button class="btn-gold" id="estimatorBookConsultBtn" style="width: 100%;">
+                <span>Reserve Consultation for this Spec</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <button class="btn-outline" id="estimatorAddToDossierBtn" style="width: 100%; margin-top: 0.75rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Add Space Curation to Dossier</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. The Art of Ébénisterie (Editorial Narrative)
+         ======================================================================== -->
+    <section class="section-craft-narrative" id="craft">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Philosophical Foundation</span>
+          <h2 class="section-title">The Art of Ébénisterie</h2>
+          <p class="section-desc">
+            We reject mass fabrication. Every creation follows a 300-year-old tradition of master joinery, where timber expands and breathes naturally through seasonal humidity shifts.
+          </p>
+        </div>
+
+        <div class="craft-chapters-grid">
+          
+          <div class="craft-chapter-card">
+            <div class="chapter-number-pill">Chapter 01 • Material Respect</div>
+            <h3 class="chapter-title">Conscious Seasoning</h3>
+            <p class="chapter-body">
+              Raw Appalachian and French timbers are dried in solar kilns for eighteen months. 
+              We stabilize each slab to a precise 7% moisture equilibrium to guarantee that joints will never warp or split.
+            </p>
+          </div>
+
+          <div class="craft-chapter-card">
+            <div class="chapter-number-pill">Chapter 02 • Structural Purity</div>
+            <h3 class="chapter-title">Zero-Fastener Joinery</h3>
+            <p class="chapter-body">
+              Our master cabinetmakers employ blind mortise-and-tenons, sliding dovetails, and organic wooden dowels. 
+              Eliminating steel screws prevents micro-stresses and allows furniture to endure over centuries.
+            </p>
+          </div>
+
+          <div class="craft-chapter-card">
+            <div class="chapter-number-pill">Chapter 03 • Tactile Soul</div>
+            <h3 class="chapter-title">Organic Botanical Finishes</h3>
+            <p class="chapter-body">
+              Surfaces receive seven coats of cold-pressed walnut oil and alpine beeswax rubbed in with horsehair brushes. 
+              The surface feels warm and skin-like, with zero synthetic polyurethane coatings.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. Global Showrooms & Ateliers
+         ======================================================================== -->
+    <section class="section-showrooms" id="showrooms">
+      <div class="container">
+        
+        <div class="section-header-editorial">
+          <span class="section-eyebrow">Private Viewings</span>
+          <h2 class="section-title">Global Ateliers</h2>
+          <p class="section-desc">
+            Experience our furniture monographs in person by private appointment, or schedule an immersive 4K virtual video tour with our lead architects.
+          </p>
+        </div>
+
+        <div class="showrooms-grid">
+          
+          <div class="showroom-card">
+            <div class="showroom-image">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="UNIX Milan Flagship Atelier" loading="lazy" />
+            </div>
+            <div class="showroom-details">
+              <div class="showroom-tagline">Global Flagship & Master Workshop</div>
+              <h3 class="showroom-city">Milan, Italy</h3>
+              <p class="showroom-address">
+                Via Monte Napoleone 18, 20121 Milano, Italy<br />
+                Tue–Sat: 10:00 – 19:00 CET
+              </p>
+              <div class="showroom-meta-links">
+                <a href="#appointmentModal" class="showroom-meta-link" data-open-appointment data-subject="Milan Atelier Private Viewing">
+                  <span>Schedule Viewing</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">+39 02 8901 3340</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="showroom-card">
+            <div class="showroom-image">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="UNIX New York Soho Gallery" loading="lazy" />
+            </div>
+            <div class="showroom-details">
+              <div class="showroom-tagline">North American Gallery</div>
+              <h3 class="showroom-city">New York, NY</h3>
+              <p class="showroom-address">
+                54 Greene Street, Soho, New York, NY 10013<br />
+                Tue–Sat: 10:00 – 18:30 EST
+              </p>
+              <div class="showroom-meta-links">
+                <a href="#appointmentModal" class="showroom-meta-link" data-open-appointment data-subject="New York Gallery Private Viewing">
+                  <span>Schedule Viewing</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">+1 (212) 555-0198</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="showroom-card">
+            <div class="showroom-image">
+              <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=700&q=80" alt="UNIX London Mayfair Studio" loading="lazy" />
+            </div>
+            <div class="showroom-details">
+              <div class="showroom-tagline">United Kingdom Atelier</div>
+              <h3 class="showroom-city">London, UK</h3>
+              <p class="showroom-address">
+                14 Berkeley Square, Mayfair, London W1J 6BL<br />
+                Mon–Fri: 09:30 – 18:00 GMT
+              </p>
+              <div class="showroom-meta-links">
+                <a href="#appointmentModal" class="showroom-meta-link" data-open-appointment data-subject="London Studio Private Viewing">
+                  <span>Schedule Viewing</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">+44 20 7946 0912</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       10. Slide-Over Client Dossier Drawer
+       ======================================================================== -->
+  <aside class="dossier-drawer" id="dossierDrawer" aria-label="Private Dossier Drawer">
+    <div class="dossier-header">
+      <h3 class="dossier-title">Private Commission Dossier</h3>
+      <button class="modal-close-btn" id="closeDossierBtn" aria-label="Close Dossier">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Items list populated by unix.js -->
+    <div class="dossier-items-list" id="dossierItemsContainer"></div>
+
+    <div class="dossier-footer">
+      <div class="dossier-total-row">
+        <span class="dossier-total-label">Projected Total</span>
+        <span class="dossier-total-sum" id="dossierTotalAmount">₹0</span>
+      </div>
+      <button class="btn-gold" id="dossierWhatsappBtn" style="width: 100%;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>Transmit to WhatsApp Concierge</span>
+      </button>
+      <button class="btn-outline" id="dossierExportBtn" style="width: 100%;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Export Specification Dossier (PDF)</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       10b. Dedicated Printable Architectural Specification Monograph
+       ======================================================================== -->
+  <div id="printableDossierDoc" class="printable-dossier-sheet" aria-hidden="true">
+    <!-- Populated dynamically by unix.js on print export -->
+  </div>
+
+  <!-- ========================================================================
+       11. Quick-View Inspection Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="quickViewModal" role="dialog" aria-modal="true" aria-label="Piece Details">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="quickViewContent">
+        <!-- Injected via unix.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       12. Private Appointment Booking Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="appointmentModal" role="dialog" aria-modal="true" aria-label="Book Private Viewing">
+    <div class="modal-dialog" style="max-width: 640px;">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="appointment-form-inner">
+        <h2 class="appointment-title">Private Atelier Viewing</h2>
+        <p class="appointment-sub">
+          Please select your preferred atelier or request a private 4K video consultation with our Master Ébéniste.
+        </p>
+
+        <form id="appointmentForm">
+          <div class="form-grid-row">
+            <div class="form-field">
+              <label class="form-label" for="clientName">Full Name *</label>
+              <input type="text" id="clientName" class="form-input" placeholder="e.g. Eleanor Vance" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="clientEmail">Email Address *</label>
+              <input type="email" id="clientEmail" class="form-input" placeholder="e.g. eleanor@studio-arch.com" required />
+            </div>
+          </div>
+
+          <div class="form-grid-row">
+            <div class="form-field">
+              <label class="form-label" for="clientPhone">Telephone Number *</label>
+              <input type="tel" id="clientPhone" class="form-input" placeholder="+1 (555) 019-2834" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="showroomSelect">Location *</label>
+              <select id="showroomSelect" class="form-select" required>
+                <option value="Milan Flagship (Via Monte Napoleone)">Milan Flagship Atelier (Italy)</option>
+                <option value="New York Soho Gallery">New York Soho Gallery (USA)</option>
+                <option value="London Mayfair Studio">London Mayfair Studio (UK)</option>
+                <option value="Virtual 4K Atelier Tour">Virtual 4K Atelier Walkthrough</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-row">
+            <div class="form-field">
+              <label class="form-label" for="appointmentDate">Preferred Date *</label>
+              <input type="date" id="appointmentDate" class="form-input" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="appointmentTime">Preferred Window *</label>
+              <select id="appointmentTime" class="form-select" required>
+                <option value="Morning (10:00 - 12:30)">Morning (10:00 – 12:30)</option>
+                <option value="Afternoon (14:00 - 16:30)">Afternoon (14:00 – 16:30)</option>
+                <option value="Evening (17:00 - 19:00)">Evening Twilight (17:00 – 19:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field full">
+            <label class="form-label" for="appointmentNotes">Commission Notes / Space Dimensions</label>
+            <textarea id="appointmentNotes" class="form-textarea" rows="3" placeholder="Tell us about your project, room dimensions, or specific curations of interest..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold" style="width: 100%;">
+            <span>Confirm Private Appointment</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       13. Monumental Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <div class="footer-brand-summary">
+          <div class="footer-brand-title">UNIX</div>
+          <p class="footer-brand-desc">
+            Haute Ébénisterie & Architecture. Sculpting heirloom timber, bronze, and Italian stone into spaces of quiet permanence.
+          </p>
+          <div style="font-size: 0.75rem; color: var(--accent-gold-dark); letter-spacing: 0.12em; text-transform: uppercase;">
+            Certified Member: Guild of Milanese Ébénistes
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Curations</div>
+          <ul class="footer-nav-list">
+            <li><a href="#curations">The Kyoto Monolith Lounger</a></li>
+            <li><a href="#curations">The Aethel Travertine Table</a></li>
+            <li><a href="#curations">The Nocturne Floating Bed</a></li>
+            <li><a href="#curations">The Solstice Tambour Credenza</a></li>
+            <li><a href="#curations">The Archetype Modular Library</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">The Atelier</div>
+          <ul class="footer-nav-list">
+            <li><a href="#studio-3d">Interactive 3D Studio</a></li>
+            <li><a href="#materials">Tactile Material Archive</a></li>
+            <li><a href="#estimator">Space Investment Planner</a></li>
+            <li><a href="#craft">Centurial Joinery Ethics</a></li>
+            <li><a href="#showrooms">Global Private Viewings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Atelier Monograph</div>
+          <div class="newsletter-box-title">Join the 2026 Registry</div>
+          <p class="newsletter-box-desc">
+            Receive our annual printed monograph and priority access to limited edition timber releases.
+          </p>
+          <form id="newsletterForm" class="newsletter-input-group">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address for monograph" />
+            <button type="submit" class="btn-gold" style="padding: 0.75rem 1.25rem;">
+              <span>Join</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 UNIX Haute Ébénisterie S.r.l. All rights reserved. Handcrafted in Milan, Italy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Charter</a>
+          <a href="#">Ethical Forestry Certificate</a>
+          <a href="#">Terms of Commission</a>
+          <a href="#">Client Care</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript Engine -->
+  <script type="module" src="./unix.js"></script>
+</body>
+</html>
