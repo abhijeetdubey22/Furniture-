@@ -114,6 +114,27 @@
       color: var(--gold-light);
     }
 
+    .btn-secondary-link {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #dedede;
+      font-weight: 500;
+      font-size: 0.76rem;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary-link:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--border-gold);
+      color: #fff;
+    }
+
     .btn-launch-full {
       background: linear-gradient(135deg, #c8a256 0%, #e8d39e 50%, #9e7b30 100%);
       color: #0c0a08;
@@ -258,13 +279,21 @@
         📱 Phone-First
       </button>
 
-      <a href="./unix.html" target="_blank" class="btn-launch-full" title="Open UNIX in Full Window">
-        <span>Launch Fullscreen</span>
+      <a href="./unix.html" target="_blank" class="btn-launch-full" title="Open UNIX Atelier in Full Window">
+        <span>✨ Launch UNIX</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
           <polyline points="15 3 21 3 21 9"></polyline>
           <line x1="10" y1="14" x2="21" y2="3"></line>
         </svg>
+      </a>
+
+      <a href="./index.html" target="_blank" class="btn-secondary-link" title="Open Ekveera Storefront">
+        <span>🛋️ Storefront</span>
+      </a>
+
+      <a href="./admin.html" target="_blank" class="btn-secondary-link" title="Open Showroom Admin Portal">
+        <span>🔐 Admin</span>
       </a>
     </div>
   </header>
@@ -319,3 +348,4 @@
   </script>
 </body>
 </html>
+

@@ -5,6 +5,12 @@
 
 import { getStoreData, addCustomerInquiry } from './data-store.js';
 
+if (!window.__EKVEERA_MAIN_INITIALIZED__) {
+  window.__EKVEERA_MAIN_INITIALIZED__ = true;
+  initEkveeraStorefront();
+}
+
+function initEkveeraStorefront() {
 // ==========================================================================
 // 1. Application State
 // ==========================================================================
@@ -540,4 +546,5 @@ function showToast(message, type = 'info') {
     toast.style.transition = 'all 0.3s ease';
     setTimeout(() => toast.remove(), 300);
   }, 3500);
+}
 }

@@ -21,6 +21,12 @@ import {
   saveStoreData
 } from './data-store.js';
 
+if (!window.__EKVEERA_ADMIN_INITIALIZED__) {
+  window.__EKVEERA_ADMIN_INITIALIZED__ = true;
+  initEkveeraAdminPortal();
+}
+
+function initEkveeraAdminPortal() {
 // ==========================================================================
 // 1. App State & DOM Elements
 // ==========================================================================
@@ -823,3 +829,5 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshAllData();
   });
 });
+}
+

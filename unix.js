@@ -25,7 +25,7 @@ const UNIX_DATA = {
       material: 'Smoked American Walnut, Bouclé Crème, Cast Champagne Bronze',
       dimensions: 'W 98cm × D 92cm × H 78cm (Seat H 41cm)',
       craftHours: '86 Hours Hand-Crafted',
-      price: 4850,
+      price: 248500,
       image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80',
       description: 'Sculpted from a single block of kiln-dried Appalachian black walnut. Features organic cantilevered armrests, dual-density natural latex cushioning, and zero visible mechanical fasteners.'
     },
@@ -37,7 +37,7 @@ const UNIX_DATA = {
       material: 'Honed Roman Navona Travertine & Brushed Brass Spine',
       dimensions: 'L 280cm × W 115cm × H 75cm (Seats 10-12)',
       craftHours: '140 Hours Stonework',
-      price: 11200,
+      price: 580000,
       image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=80',
       description: 'Quarried from the historic Roman foothills of Tivoli. Hand-chiseled fluted dual pedestals supporting an undulating 45mm honed travertine slab treated with invisible organic oleophobic sealant.'
     },
@@ -49,7 +49,7 @@ const UNIX_DATA = {
       material: 'Solid Ash Frame, Washed Belgian Linen, Goose Down Layer',
       dimensions: 'L 360cm × D 110cm × H 68cm (Custom Modular)',
       craftHours: '115 Hours Atelier Craft',
-      price: 13800,
+      price: 690000,
       image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80',
       description: 'Low-profile architectural lounging grounded in minimalist Japanese proportions. Configurable modules with integrated smoked oak side plinths and wireless charging inserts.'
     },
@@ -61,7 +61,7 @@ const UNIX_DATA = {
       material: 'American Walnut, Full-Grain Tuscan Saddle Leather, Warm 2700K LED',
       dimensions: 'W 220cm × L 235cm × H 92cm (King Size)',
       craftHours: '98 Hours Woodworking',
-      price: 8900,
+      price: 445000,
       image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80',
       description: 'Engineered with hidden steel-reinforced cantilevers to impart an illusion of weightlessness. Hand-stitched saddle leather headboard wings with touch-dimming ambient brass lighting.'
     },
@@ -73,7 +73,7 @@ const UNIX_DATA = {
       material: 'Smoked Oak Tambour, Nero Marquina Marble Top, Brass Accents',
       dimensions: 'W 210cm × D 50cm × H 76cm',
       craftHours: '105 Hours Joinery',
-      price: 7650,
+      price: 385000,
       image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=80',
       description: 'Features curved sliding tambour doors crafted from individual 12mm fluted oak battens. Interior fitted with velvet-lined audio drawers, cable routing, and acoustic fabric back panels.'
     },
@@ -85,7 +85,7 @@ const UNIX_DATA = {
       material: 'Molded French Walnut Veneer, Cognac Aniline Leather',
       dimensions: 'W 84cm × D 88cm × H 104cm',
       craftHours: '72 Hours Hand Finishing',
-      price: 4300,
+      price: 215000,
       image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=80',
       description: 'A study in organic ergonomics. The double-curved timber shell cradles the spinal lumbar while maintaining a razor-thin silhouette inspired by mid-century Danish and Milanese modernism.'
     },
@@ -97,7 +97,7 @@ const UNIX_DATA = {
       material: 'Lost-Wax Cast Bronze Top, Chiseled Basalt Monolith Bases',
       dimensions: 'L 155cm × W 95cm × H 36cm',
       craftHours: '90 Hours Metal & Stone',
-      price: 6400,
+      price: 320000,
       image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80',
       description: 'Lost-wax bronze pour with hand-patinated fire finish that reveals golden undertones under evening light. Rested upon twin volcanic basalt blocks split by hand with traditional wedges.'
     },
@@ -109,7 +109,7 @@ const UNIX_DATA = {
       material: 'Smoked Ash, Fluted Flou Glass, Micro-LED Channels, Champagne Brass',
       dimensions: 'W 320cm × H 280cm × D 42cm (Bespoke Sizing)',
       craftHours: '160 Hours Master Joinery',
-      price: 19500,
+      price: 980000,
       image: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=1000&q=80',
       description: 'Bespoke ceiling-anchored architectural millwork system. Features integrated concealed sliding ladders, climate-controlled collector vitrines, and custom flush-mount downlight channels.'
     }
@@ -117,13 +117,13 @@ const UNIX_DATA = {
 
   swatches: [
     { id: 'boucle', name: 'Bouclé Ivoire', color: '#EBE7DF', extraPrice: 0, previewShade: '#D8D2C5', type: 'fabric' },
-    { id: 'leather', name: 'Tuscan Saddle Leather', color: '#8B4513', extraPrice: 650, previewShade: '#5E2E0D', type: 'leather' },
-    { id: 'walnut', name: 'Smoked American Walnut', color: '#3A271D', extraPrice: 480, previewShade: '#241812', type: 'wood' },
-    { id: 'white-oak', name: 'Nordic Bleached Oak', color: '#D8CBB5', extraPrice: 320, previewShade: '#B8A890', type: 'wood' },
-    { id: 'emerald', name: 'Imperial Emerald Velvet', color: '#1B382B', extraPrice: 550, previewShade: '#10221A', type: 'fabric' },
-    { id: 'travertine', name: 'Roman Travertine Stone', color: '#D9D0C1', extraPrice: 850, previewShade: '#BDB19E', type: 'stone' },
-    { id: 'charcoal', name: 'Carbon Smoked Ash', color: '#2A2A2A', extraPrice: 390, previewShade: '#181818', type: 'wood' },
-    { id: 'viola', name: 'Calacatta Viola Marble', color: '#6A4B54', extraPrice: 1200, previewShade: '#4A333A', type: 'stone' }
+    { id: 'leather', name: 'Tuscan Saddle Leather', color: '#8B4513', extraPrice: 28500, previewShade: '#5E2E0D', type: 'leather' },
+    { id: 'walnut', name: 'Smoked American Walnut', color: '#3A271D', extraPrice: 18000, previewShade: '#241812', type: 'wood' },
+    { id: 'white-oak', name: 'Nordic Bleached Oak', color: '#D8CBB5', extraPrice: 14500, previewShade: '#B8A890', type: 'wood' },
+    { id: 'emerald', name: 'Imperial Emerald Velvet', color: '#1B382B', extraPrice: 22000, previewShade: '#10221A', type: 'fabric' },
+    { id: 'travertine', name: 'Roman Travertine Stone', color: '#D9D0C1', extraPrice: 35000, previewShade: '#BDB19E', type: 'stone' },
+    { id: 'charcoal', name: 'Carbon Smoked Ash', color: '#2A2A2A', extraPrice: 16500, previewShade: '#181818', type: 'wood' },
+    { id: 'viola', name: 'Calacatta Viola Marble', color: '#6A4B54', extraPrice: 52000, previewShade: '#4A333A', type: 'stone' }
   ],
 
   models: {
@@ -274,8 +274,8 @@ class DossierManager {
         <div class="print-meta-block">
           <div><strong>Commission Dossier Ref:</strong> ${refCode}</div>
           <div><strong>Date:</strong> ${today}</div>
-          <div><strong>Flagship Atelier:</strong> Via Monte Napoleone 18, 20121 Milano</div>
-          <div><strong>Concierge Direct:</strong> concierge@unixatelier.com • +39 340 890 1334</div>
+          <div><strong>Flagship Atelier:</strong> Suite 101, Luxury Design Boulevard, Mumbai • Milan • New Delhi</div>
+          <div><strong>Concierge Direct:</strong> concierge@unixatelier.com • +91 98765 43210</div>
         </div>
       </div>
 
@@ -298,22 +298,22 @@ class DossierManager {
               <td>${item.material}</td>
               <td>${item.dimensions || 'Bespoke Sizing'}</td>
               <td style="text-align: center;">${item.qty || 1}</td>
-              <td style="text-align: right;">€${(item.price * (item.qty || 1)).toLocaleString()}</td>
+              <td style="text-align: right;">₹${(item.price * (item.qty || 1)).toLocaleString('en-IN')}</td>
             </tr>
           `).join('')}
         </tbody>
       </table>
 
       <div class="print-total-row">
-        <span>Projected Atelier Investment (VAT & White-Glove Installation Included):</span>
-        <span class="print-total-figure">€${this.getTotal().toLocaleString()}</span>
+        <span>Projected Atelier Investment (GST & White-Glove Installation Included):</span>
+        <span class="print-total-figure">₹${this.getTotal().toLocaleString('en-IN')}</span>
       </div>
 
       <div class="print-footer-terms">
         <p><strong>Commission Terms & Heirloom Ethics:</strong> All timbers are harvested from certified regenerative forests and seasoned in solar kilns for eighteen months to a strict 7% moisture equilibrium. Monolithic stone is hand-honed in Tivoli, Italy with organic oleophobic sealants. Every commission is covered by our lifetime heirloom structural warranty.</p>
         <div style="margin-top: 2rem; display: flex; justify-content: space-between; border-top: 1px dashed #CCCCCC; padding-top: 1rem;">
           <span>Client Representative Signature: ___________________________</span>
-          <span>Master Ébéniste Sign-off: UNIX Atelier Milano</span>
+          <span>Master Ébéniste Sign-off: UNIX Atelier</span>
         </div>
       </div>
     `;
@@ -343,7 +343,7 @@ class DossierManager {
           <p style="font-size: 0.82rem; line-height: 1.6;">Configure your bespoke piece in the 3D Studio, explore curations, or plan a room investment to build your private dossier.</p>
         </div>
       `;
-      if (totalAmountEl) totalAmountEl.textContent = '€0';
+      if (totalAmountEl) totalAmountEl.textContent = '₹0';
       return;
     }
 
@@ -354,7 +354,7 @@ class DossierManager {
           <div class="dossier-item-name">${item.name}</div>
           <div class="dossier-item-spec">${item.material}</div>
           <div class="dossier-item-bottom">
-            <div class="dossier-item-price">€${(item.price * (item.qty || 1)).toLocaleString()}</div>
+            <div class="dossier-item-price">₹${(item.price * (item.qty || 1)).toLocaleString('en-IN')}</div>
             <div class="dossier-qty-controls">
               <button class="qty-btn" data-qty-dec="${idx}" aria-label="Decrease quantity">−</button>
               <span class="qty-val">${item.qty || 1}</span>
@@ -372,7 +372,7 @@ class DossierManager {
     `).join('');
 
     if (totalAmountEl) {
-      totalAmountEl.textContent = `€${this.getTotal().toLocaleString()}`;
+      totalAmountEl.textContent = `₹${this.getTotal().toLocaleString('en-IN')}`;
     }
 
     // Sync wishlist buttons in catalog
@@ -432,10 +432,10 @@ class DossierManager {
           const subtotal = item.price * qty;
           msg += `%0A${idx + 1}. *${item.name}*`;
           if (qty > 1) msg += ` (${qty}×)`;
-          msg += `%0A   Finish: ${item.material}%0A   Estimate: €${subtotal.toLocaleString()}%0A`;
+          msg += `%0A   Finish: ${item.material}%0A   Estimate: ₹${subtotal.toLocaleString('en-IN')}%0A`;
         });
-        msg += `%0A*Total Projected Investment:* €${this.getTotal().toLocaleString()}%0A%0APlease advise on fabrication schedule, lead times, and private viewing availability.`;
-        window.open(`https://wa.me/393408901334?text=${msg}`, '_blank');
+        msg += `%0A*Total Projected Investment:* ₹${this.getTotal().toLocaleString('en-IN')}%0A%0APlease advise on fabrication schedule, lead times, and private viewing availability.`;
+        window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
       });
     }
 
@@ -645,15 +645,15 @@ class FurnitureStudio3D {
     const priceEl = document.getElementById('studioConfiguredPrice');
     if (priceEl && model) {
       const total = model.basePrice + this.currentSwatch.extraPrice;
-      priceEl.textContent = `€${total.toLocaleString()}`;
+      priceEl.textContent = `₹${total.toLocaleString('en-IN')}`;
     }
   }
 
   resize() {
     const rect = this.canvas.getBoundingClientRect();
     const parentRect = this.canvas.parentElement ? this.canvas.parentElement.getBoundingClientRect() : { width: 600, height: 500 };
-    this.width = rect.width || parentRect.width || 600;
-    this.height = rect.height || (parentRect.height - 65) || 480;
+    this.width = Math.max(300, rect.width || parentRect.width || 600);
+    this.height = Math.max(300, rect.height || (parentRect.height - 65) || 480);
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.canvas.width = Math.round(this.width * dpr);
@@ -1063,11 +1063,16 @@ class FurnitureStudio3D {
 
         // Directional shading gradient based on projected face orientation
         const pMid = pts[Math.floor(pts.length / 2)] || pts[0];
-        const grad = ctx.createLinearGradient(pts[0].x, pts[0].y, pMid.x, pMid.y);
-        grad.addColorStop(0, item.fill);
-        grad.addColorStop(1, item.stroke || '#000000');
+        const dist = Math.hypot(pMid.x - pts[0].x, pMid.y - pts[0].y);
+        if (dist > 2) {
+          const grad = ctx.createLinearGradient(pts[0].x, pts[0].y, pMid.x, pMid.y);
+          grad.addColorStop(0, item.fill);
+          grad.addColorStop(1, item.stroke || '#000000');
+          ctx.fillStyle = grad;
+        } else {
+          ctx.fillStyle = item.fill;
+        }
 
-        ctx.fillStyle = grad;
         ctx.fill();
 
         ctx.lineWidth = 1.2;
@@ -1518,7 +1523,10 @@ function showToast(message) {
 // ==========================================================================
 // 8. Global Initialization & Event Listeners
 // ==========================================================================
-document.addEventListener('DOMContentLoaded', () => {
+function initUnixExperience() {
+  if (window.__UNIX_INITIALIZED__) return;
+  window.__UNIX_INITIALIZED__ = true;
+
   // 1. Initialize Client Dossier
   dossier = new DossierManager();
 
@@ -1679,4 +1687,21 @@ document.addEventListener('DOMContentLoaded', () => {
       openAppointmentModal(`Material Sample Box: ${material}`);
     });
   });
-});
+
+  // Expose namespace for testing & iframe inspection
+  window.UnixAtelier = {
+    data: UNIX_DATA,
+    getDossier: () => dossier,
+    studio: studio3D,
+    showToast,
+    openAppointmentModal,
+    closeModal
+  };
+}
+
+// Universal boot trigger: executes whether DOM is loading or already parsed
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initUnixExperience);
+} else {
+  initUnixExperience();
+}

@@ -798,7 +798,14 @@
   <!-- Toast Notification Container -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <!-- Master JavaScript Application -->
+  <!-- Master JavaScript Application (Universal Dual-Mode Loader for local desktop and hosted servers) -->
+  <script>
+    if (window.location.protocol === 'file:') {
+      const s = document.createElement('script');
+      s.src = './main.bundle.js';
+      document.write(s.outerHTML);
+    }
+  </script>
   <script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -998,7 +998,14 @@
     </div>
   </footer>
 
-  <!-- Master JavaScript Engine -->
+  <!-- Master JavaScript Engine (Universal Dual-Mode Loader for local desktop and hosted servers) -->
+  <script>
+    if (window.location.protocol === 'file:') {
+      const s = document.createElement('script');
+      s.src = './unix.js';
+      document.write(s.outerHTML);
+    }
+  </script>
   <script type="module" src="./unix.js"></script>
 </body>
 </html>
